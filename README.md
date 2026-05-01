@@ -14,3 +14,4 @@ CSV – AQI (Air Quality Index) dataset
 ![GDP and Child Mortality](https://github.com/sayma-code/Python-for-Systems-Intelligence-and-Analytics/blob/main/Project/plots/gdp_child_mortality.png)
 ![Literacy and Child Mortality](https://github.com/sayma-code/Python-for-Systems-Intelligence-and-Analytics/blob/main/Project/plots/literacy_child_mortality.png)
 
+![Literacy and Child Mortality](https://github.com/sayma-code/Python-for-Systems-Intelligence-and-Analytics/blob/main/Project/plots/literacy_child_mortality.png)

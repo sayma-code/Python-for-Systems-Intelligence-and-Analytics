@@ -26,7 +26,7 @@ df_pdf["year"] = df_pdf["year"].astype(str)
 mydb1 = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="password",
+  password="I will forget this",
   database="health_data"
 )
 df_who = pd.read_sql("SELECT * FROM child_mortality", mydb1)
@@ -78,7 +78,7 @@ for col in numeric_cols:
 df_final[numeric_cols] = df_final[numeric_cols].fillna(df_final[numeric_cols].median())
 df_final["Status"] = df_final["Status"].fillna("Unknown")
 
-df_final.to_excel("final_health_dataset.xlsx", index=False)
+
 
 # -----------------------------
 # DESCRIPTIVE ANALYTICS
@@ -211,7 +211,29 @@ plt.ylabel("Child Mortality Rate")
 plt.savefig("Project/plots/literacy_child_mortality.png", dpi=300, bbox_inches="tight")
 plt.close()
 
+plt.figure(figsize=(8,5))
+sns.scatterplot(data=df_final, x="health_expenditure_pct_gdp", y="child_mortality_rate", color="green")
+plt.title("Health Expenditure vs Child Mortality Rate")
+plt.xlabel("Health Expenditure (% of GDP)")
+plt.ylabel("Child Mortality Rate")
+plt.savefig("Project/plots/health_expenditure_child_mortality.png", dpi=300, bbox_inches="tight")
+plt.close()
 
+plt.figure(figsize=(8,5))
+sns.scatterplot(data=df_final, x="popdensity", y="child_mortality_rate", color="green")
+plt.title("Population Density vs Child Mortality Rate")
+plt.xlabel("Population Density")
+plt.ylabel("Child Mortality Rate")
+plt.savefig("Project/plots/popdensity_child_mortality.png", dpi=300, bbox_inches="tight")
+plt.close()
+
+plt.figure(figsize=(8,5))
+sns.scatterplot(data=df_final, x="AQI_Value", y="child_mortality_rate", color="green")
+plt.title("Air Quality vs Child Mortality Rate")
+plt.xlabel("AQI Value")
+plt.ylabel("Child Mortality Rate")
+plt.savefig("Project/plots/aqi_child_mortality.png", dpi=300, bbox_inches="tight")
+plt.close()
 # -----------------------------
 # Benchmarking: Compare with WHO data
 

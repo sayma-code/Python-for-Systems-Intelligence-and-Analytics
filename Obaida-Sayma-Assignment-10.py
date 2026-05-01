@@ -6,7 +6,7 @@ import mysql.connector
 mydb1 = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="I will forget this"
+  password="password"
 )
 
 #printing the connection
@@ -23,7 +23,7 @@ for x in mycursor1:
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="I will forget this",
+  password="password",
   database="mydatabase"
 )
 #5. Creating a table named customers
@@ -92,7 +92,7 @@ for x in mycursor1:
 mydb3 = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="I will forget this",
+  password="password",
   database="mydatabase"
 )
 #Creating a table named customers2
